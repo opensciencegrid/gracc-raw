@@ -1,6 +1,6 @@
 {
     "order" : 0,
-    "template" : "gracc.*.raw0-*",
+    "template" : "gracc.*.raw1-*",
     "settings" : {
         "index" : {
             "translog" : {
@@ -354,15 +354,17 @@
                         "index" : "not_analyzed"
                     },
                     "Network_phaseUnit" : {
-                        "type" : "double"
+                        "type" : "long"
                     },
                     "Network_storageUnit" : {
                         "type" : "string",
                         "index" : "not_analyzed"
                     },
+                    "Njobs" : {
+                        "type" : "long"
+                    },
                     "NodeCount" : {
-                        "type" : "string",
-                        "index" : "not_analyzed"
+                        "type" : "integer"
                     },
                     "NodeCount_metric" : {
                         "type" : "string",
@@ -377,7 +379,7 @@
                         "index" : "not_analyzed"
                     },
                     "Processors" : {
-                        "type" : "long"
+                        "type" : "integer"
                     },
                     "Processors_metric" : {
                         "type" : "string",
@@ -436,10 +438,10 @@
                         "type" : "boolean"
                     },
                     "Resource_ExitCode" : {
-                        "type" : "long"
+                        "type" : "integer"
                     },
                     "Resource_ExitSignal" : {
-                        "type" : "long"
+                        "type" : "integer"
                     },
                     "Resource_IsNew" : {
                         "type" : "string",
@@ -458,7 +460,7 @@
                         "index" : "not_analyzed"
                     },
                     "Resource_condor-JobStatus" : {
-                        "type" : "long"
+                        "type" : "integer"
                     },
                     "ServiceLevel" : {
                         "type" : "string",
@@ -476,7 +478,7 @@
                         "format" : "strict_date_optional_time||epoch_millis"
                     },
                     "Status" : {
-                        "type" : "long"
+                        "type" : "integer"
                     },
                     "Status_description" : {
                         "type" : "string"

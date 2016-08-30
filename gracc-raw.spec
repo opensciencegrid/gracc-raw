@@ -2,7 +2,7 @@
 %define debug_package ${nil}
 
 Name:           gracc-raw
-Version:        0.02.00
+Version:        0.02.01
 Release:        1%{?dist}
 Summary:        GRACC RAW Record Processor
 License:        MIT
@@ -52,6 +52,9 @@ getent passwd gracc >/dev/null || \
 exit 0
 
 %changelog
+* Tue Aug 30 2016 Kevin Retzke <kretzke@fnal.gov> - 0.02.01-1
+- Update mappings for Njobs and NodeCount fields
+
 * Tue Aug 30 2016 Kevin Retzke <kretzke@fnal.gov> - 0.02.00-1
 - Use environment variables in logstash config
 
