@@ -9,7 +9,9 @@ User=gracc
 Group=gracc
 Type=simple
 Restart=on-failure
-ExecStart=/opt/logstash/bin/logstash -f /etc/gracc/gracc-raw.%i.conf
+EnvironmentFile=/etc/gracc-stash/defaults.env
+Environment=GRACC_STREAM=%i
+ExecStart=/opt/logstash/bin/logstash -f /etc/gracc-stash/gracc-raw.conf --allow-env
 TimeoutStopSec=20
 
 [Install]
